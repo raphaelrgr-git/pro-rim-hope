@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import { ClinicalSidebar } from '@/components/ClinicalSidebar';
-import { Heart } from 'lucide-react';
+import logoProRim from '@/assets/logo-pro-rim.jpg';
 
 const ClinicalLayout = () => {
   return (
@@ -12,7 +12,7 @@ const ClinicalLayout = () => {
           <header className="h-14 flex items-center border-b px-4 gap-3 bg-background">
             <SidebarTrigger />
             <div className="flex items-center gap-2">
-              <Heart className="h-5 w-5 text-primary fill-primary" />
+              <img src={logoProRim} alt="Pró-Rim" className="h-8 object-contain" />
               <span className="font-semibold text-primary text-sm">Pró-Link</span>
             </div>
             <span className="text-xs text-muted-foreground">Painel Clínico</span>
