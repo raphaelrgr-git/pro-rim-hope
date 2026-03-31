@@ -3,27 +3,22 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
-import { Heart } from 'lucide-react';
+import logoProRim from '@/assets/logo-pro-rim.jpg';
 
 const Login = () => {
   const [mode, setMode] = useState<'patient' | 'clinical'>('patient');
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-secondary p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-secondary via-background to-secondary p-4">
       <div className="w-full max-w-md space-y-6">
         {/* Logo */}
-        <div className="text-center space-y-2">
-          <div className="flex items-center justify-center gap-2">
-            <div className="relative">
-              <Heart className="h-10 w-10 text-primary fill-primary" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-3 h-3 rounded-full bg-primary-foreground" />
-              </div>
-            </div>
-            <h1 className="text-3xl font-bold text-primary tracking-tight">Pró-Link</h1>
+        <div className="text-center space-y-3">
+          <img src={logoProRim} alt="Fundação Pró-Rim" className="h-24 mx-auto object-contain" />
+          <div className="space-y-1">
+            <h1 className="text-2xl font-bold text-primary tracking-tight">Pró-Link</h1>
+            <p className="text-muted-foreground text-sm">Acelerador de Esperança — Fundação Pró-Rim</p>
           </div>
-          <p className="text-muted-foreground text-sm">Acelerador de Esperança — Fundação Pró-Rim</p>
         </div>
 
         {/* Toggle */}
@@ -47,7 +42,7 @@ const Login = () => {
         </div>
 
         {/* Form */}
-        <Card>
+        <Card className="shadow-lg border-0">
           <CardContent className="pt-6 space-y-4">
             {mode === 'patient' ? (
               <>
